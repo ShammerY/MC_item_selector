@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Very Easy list</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='category_selection.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='list.css') }}">
 </head>
 <body>
-    <h2>Very Easy Items</h2>
+    <h2>Registered Items</h2>
     <table>
         <thead>
             <tr>
-                <th>ID</th>
+                <th>Image</th>
                 <th>Name</th>
                 <th>Selected</th>
                 <th>Delete</th>
@@ -20,12 +20,25 @@
         <tbody>
             {% for item in items %}
             <tr>
-                <td>{{ item.id }}</td>
+                <td>
+                    {% if item.image_url %}
+                        <img src="{{ item.image_url }}" alt="Item Image" class="item-image">
+                    {% else %}
+                        <span>No Image</span>
+                    {% endif %}
+                </td>
                 <td>{{ item.name }}</td>
                 <td>
-                    <a href="/edit/{{ item.id }}">
-                        <button class="btn-edit">Select</button>
-                    </a>
+                    {% if item.is_active %}
+                        <form action="/select_item/{{ item.id }}" method="POST">
+                            <button type="submit" class="btn-selected">Selected</button>
+                        </form>
+                    {% else %}
+                        <form action="/select_item/{{ item.id }}" method="POST">
+                            <button type="submit" class="btn-unselected">Unselected</button>
+                        </form>
+                    {% endif %}
+                    
                 </td>
                 <td>
                     <form action="/items/{{ item.id }}" method="DELETE" onsubmit="return confirm('¿Estás seguro de eliminar este usuario?');">

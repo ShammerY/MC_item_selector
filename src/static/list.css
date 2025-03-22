@@ -1,14 +1,9 @@
+ 
 body {
-    background-color: #4747d1; /* Morado oscuro */
-    text-align: center;
-    color: white;
-    font-family: Arial, sans-serif;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    padding-top: 50px; /* Agrega espacio en la parte superior */
     margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #3d81cf;
 }
 
 h2 {
@@ -23,44 +18,6 @@ h2 {
     display: flex;
     flex-direction: column; /* Acomoda los botones en columna */
     gap: 20px; /* Espaciado entre botones */
-}
-.register-button {
-    width: 300px; /* Botones más grandes */
-    padding: 20px 25px;
-    font-size: 18px;
-    background-color: #800060; /* Verde llamativo */
-    color: white;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    font-weight: bold;
-    text-transform: uppercase; /* Texto en mayúsculas */
-    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.3);
-    transition: all 0.3s ease-in-out;
-}
-.register-button:hover {
-    background-color: #ff33ff; /* Verde más oscuro */
-    transform: scale(1.05); /* Efecto de agrandamiento */
-}
-
-.category-button {
-    width: 250px; /* Botones más grandes */
-    padding: 15px 25px;
-    font-size: 18px;
-    background-color: #4CAF50; /* Verde llamativo */
-    color: white;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    font-weight: bold;
-    text-transform: uppercase; /* Texto en mayúsculas */
-    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.3);
-    transition: all 0.3s ease-in-out;
-}
-
-.category-button:hover {
-    background-color: #388E3C; /* Verde más oscuro */
-    transform: scale(1.05); /* Efecto de agrandamiento */
 }
 
 table {
@@ -99,11 +56,15 @@ tr:hover {
 }
 
 .btn-selected {
+    padding: 8px 12px;
+    font-size: 14px;
     background-color: #05c46b; /* Verde */
     color: white;
 }
 
 .btn-unselected {
+    padding: 8px 12px;
+    font-size: 14px;
     background-color: #a4a8a6; /* Verde */
     color: white;
 }
@@ -123,4 +84,3 @@ tr:hover {
 .btn-delete:hover {
     background-color: #ff5e57; /* Rojo claro */
 }
-
