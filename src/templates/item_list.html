@@ -8,6 +8,9 @@
 </head>
 <body>
     <h2>Registered Items</h2>
+    <div class="button-container">
+        <a href="/item_category" class="back-btn">Go Back</a>
+    </div>
     <table>
         <thead>
             <tr>
@@ -27,7 +30,7 @@
                         <span>No Image</span>
                     {% endif %}
                 </td>
-                <td>{{ item.name }}</td>
+                <td class="item-name">{{ item.name }}</td>
                 <td>
                     {% if item.is_active %}
                         <form action="/select_item/{{ item.id }}" method="POST">
@@ -49,8 +52,5 @@
             {% endfor %}
         </tbody>
     </table>
-    <div class="button-container">
-        <a href="/item_category" class="btn">Go Back</a>
-    </div>
 </body>
 </html>

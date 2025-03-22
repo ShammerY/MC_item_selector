@@ -2,6 +2,7 @@ from flask import Blueprint, request, jsonify, render_template, redirect, curren
 from models import db, Item
 import os
 from werkzeug.utils import secure_filename
+import random
 
 routes = Blueprint('routes', __name__)
 ALLOWED_EXTENSIONS = {'png', 'jpg', 'jpeg', 'gif'}
@@ -143,4 +144,12 @@ def toggle_selected(item_id):
     else:
         return jsonify({'message':'PERO QUE HA PASAO!!??'})
     
+
+@routes.route('/start_game/')
+def start_game():
+    items = Item.query.filter_by(is_active=True).all()
+
+    selected_items = random.sample(items, min(len(items), 9))
+    
+    return render_template('game.html',items=selected_items)
     

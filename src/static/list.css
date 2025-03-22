@@ -9,9 +9,11 @@ body {
 h2 {
     font-size: 36px;
     font-weight: bold;
-    color: #FFD700; /* Dorado */
+    color: #8f0404; /* Dorado */
     text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.6);
     margin-bottom: 40px;
+    text-align: center;
+    margin-top: 20px;
 }
 
 .container {
@@ -29,6 +31,20 @@ table {
     font-family: Arial, sans-serif;
     border-radius: 10px;
     overflow: hidden;
+}
+
+.back-btn{
+    padding: 20px 30px;
+    font-size: 14px;
+    background-color: #792ad3; /* Verde */
+    color: white;
+    margin-left: 50px;
+}
+
+.item-name {
+    font-size: 30px; /* Ajusta el tamaño según prefieras */
+    font-weight: bold; /* Hace el texto más visible */
+    text-align: center; /* Centra el nombre en la celda */
 }
 
 thead {

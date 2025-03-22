@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='game.css') }}">
+</head>
+<body>
+    <h2>Game Items</h2>
+    <div class="items-container">
+        {% for item in items %}
+        <div class="item-card">
+            <!-- <img src="{{ item.image_url }}" alt="Item Image" class="item-image"> -->
+            <img src="{{ url_for('static', filename=item.image_url.split('static/')[-1]) }}" alt="Item Image">
+            <!-- <h3>{{ item.name }}</h3> -->
+        </div>
+        {% endfor %}
+    </div>
+    <div class="button-container">
+        <a href="/" class="back-btn">Go Back</a>
+    </div>
+</body>
+</html>

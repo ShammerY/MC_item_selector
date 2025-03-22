@@ -1,0 +1,35 @@
+body {
+    padding-top: 50px; /* Agrega espacio en la parte superior */
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #3d81cf;
+}
+.back-btn{
+    padding: 20px 30px;
+    font-size: 14px;
+    background-color: #792ad3; /* Verde */
+    color: white;
+    margin-left: 50px;
+}
+
+.items-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
+    text-align: center;
+}
+
+.item-card {
+    border: 2px solid #ccc;
+    padding: 15px;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+}
+
+.item-card img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 5px;
+}
