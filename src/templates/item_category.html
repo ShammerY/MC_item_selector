@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Category Selection</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='category_selection.css') }}">
+</head>
+<body>
+    <div>
+        <h2>ITEM CATEGORY SELECTION</h2>
+    </div>
+    
+    <div class="container">
+        <a href="/very_easy_list">
+            <button class="category-button">Very Easy</button>
+        </a>
+        <a href="/easy_list">
+            <button class="category-button">Easy</button>
+        </a>
+        <a href="/normal_list">
+            <button class="category-button">Normal</button>
+        </a>
+        <a href="/hard_list">
+            <button class="category-button">Hard</button>
+        </a>
+        <a href="/register_item" method="GET">
+            <button class="register-button">REGISTER ITEM</button>
+        </a>
+    </div>
+</body>
+</html>

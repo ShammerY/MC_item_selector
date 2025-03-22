@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Very Easy list</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='category_selection.css') }}">
+</head>
+<body>
+    <h2>Very Easy Items</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Selected</th>
+                <th>Delete</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for item in items %}
+            <tr>
+                <td>{{ item.id }}</td>
+                <td>{{ item.name }}</td>
+                <td>
+                    <a href="/edit/{{ item.id }}">
+                        <button class="btn-edit">Select</button>
+                    </a>
+                </td>
+                <td>
+                    <form action="/items/{{ item.id }}" method="DELETE" onsubmit="return confirm('¿Estás seguro de eliminar este usuario?');">
+                        <button type="submit" class="btn-delete">Delete</button>
+                    </form>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <div class="button-container">
+        <a href="/item_category" class="btn">Go Back</a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,118 @@
+body {
+    background-color: #4747d1; /* Morado oscuro */
+    text-align: center;
+    color: white;
+    font-family: Arial, sans-serif;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+h2 {
+    font-size: 36px;
+    font-weight: bold;
+    color: #FFD700; /* Dorado */
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.6);
+    margin-bottom: 40px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column; /* Acomoda los botones en columna */
+    gap: 20px; /* Espaciado entre botones */
+}
+.register-button {
+    width: 300px; /* Botones más grandes */
+    padding: 20px 25px;
+    font-size: 18px;
+    background-color: #800060; /* Verde llamativo */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    text-transform: uppercase; /* Texto en mayúsculas */
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease-in-out;
+}
+.register-button:hover {
+    background-color: #ff33ff; /* Verde más oscuro */
+    transform: scale(1.05); /* Efecto de agrandamiento */
+}
+
+.category-button {
+    width: 250px; /* Botones más grandes */
+    padding: 15px 25px;
+    font-size: 18px;
+    background-color: #4CAF50; /* Verde llamativo */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    text-transform: uppercase; /* Texto en mayúsculas */
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease-in-out;
+}
+
+.category-button:hover {
+    background-color: #388E3C; /* Verde más oscuro */
+    transform: scale(1.05); /* Efecto de agrandamiento */
+}
+
+table {
+    width: 80%;
+    border-collapse: collapse;
+    margin: 20px auto;
+    background-color: #2c2c54; /* Azul oscuro */
+    color: white;
+    font-family: Arial, sans-serif;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+thead {
+    background-color: #40407a; /* Azul morado */
+    font-size: 18px;
+}
+
+th, td {
+    padding: 12px;
+    text-align: center;
+    border-bottom: 1px solid #575fcf;
+}
+
+tr:hover {
+    background-color: #3c40c6; /* Azul brillante */
+    transition: 0.3s;
+}
+
+.btn-edit, .btn-delete {
+    padding: 8px 12px;
+    font-size: 14px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.btn-edit {
+    background-color: #05c46b; /* Verde */
+    color: white;
+}
+
+.btn-delete {
+    background-color: #ff3f34; /* Rojo */
+    color: white;
+}
+
+.btn-edit:hover {
+    background-color: #0be881; /* Verde claro */
+}
+
+.btn-delete:hover {
+    background-color: #ff5e57; /* Rojo claro */
+}
+

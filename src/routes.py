@@ -5,21 +5,45 @@ routes = Blueprint('routes', __name__)
 
 @routes.route('/')
 def welcome():
-    return 'Hello World'
+    return render_template('index.html')
+
+@routes.route('/item_category')
+def item_category_selection():
+    return render_template('item_category.html')
+
+@routes.route('/very_easy_list',methods=['GET'])
+def very_easy_list():
+    items = Item.query.filter_by(category="very easy").all()
+    return render_template('very_easy_list.html',items=items)
+
+@routes.route('/easy_list',methods=['GET'])
+def easy_list():
+    items = Item.query.filter_by(category="easy").all()
+    return render_template('very_easy_list.html',items=items)
+
+@routes.route('/normal_list',methods=['GET'])
+def normal_list():
+    items = Item.query.filter_by(category="normal").all()
+    return render_template('very_easy_list.html',items=items)
+
+@routes.route('/hard_list',methods=['GET'])
+def hard_list():
+    items = Item.query.filter_by(category="hard").all()
+    return render_template('very_easy_list.html',items=items)
 
 @routes.route('/items',methods=['POST'])
 def create_item():
     
 
     #Obtener datos enviados con formato Json
-    data = request.get_json()
+    # data = request.get_json()
 
-    name = data.get('name')
-    category = data.get('category')
+    # name = data.get('name')
+    # category = data.get('category')
 
     #Obtener datos cuando se envian por un formulario
-    # name = request.form.get('name')
-    # category = request.form.get('category')
+    name = request.form.get('name')
+    category = request.form.get('category')
 
     if not all([name, category]):
         return jsonify({'error': 'Todos los campos son obligatorios'}), 400
@@ -30,6 +54,10 @@ def create_item():
     db.session.commit()
 
     return redirect('/')
+
+@routes.route('/register_item',methods=['GET'])
+def register_item_open():
+    return render_template('register_item.html')
 
 @routes.route('/items',methods=['GET'])
 def get_items():

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Item</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='register.css') }}">
+</head>
+<body>
+    <div class="form-container">
+        <h2>Create New Item</h2>
+        <form action="/items" method="POST">
+            <label for="name">Item Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="category">Category:</label>
+            <select id="category" name="category" required>
+                <option value="very easy">Very Easy</option>
+                <option value="easy">Easy</option>
+                <option value="normal">Normal</option>
+                <option value="hard">Hard</option>
+            </select>
+
+            <button type="submit" class="btn-submit">Create Item</button>
+        </form>
+    </div>
+</body>
+</html>
