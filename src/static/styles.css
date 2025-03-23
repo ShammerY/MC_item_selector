@@ -1,5 +1,5 @@
 body {
-    background-color: #3377ff; /* Morado oscuro */
+    background-color: #1c1c31; /* Morado oscuro */
     text-align: center; /* Centra el contenido horizontalmente */
     color: white;
     font-family: Arial, sans-serif;
@@ -11,32 +11,41 @@ body {
     margin: 0;
 }
 
+
 h2 {
     font-size: 32px;
     font-weight: bold;
-    color: #000033; /* Dorado */
+    color: #c7c7c7; /* Dorado */
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
     margin-bottom: 40px; /* Espacio con los botones */
 }
 
 .container {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     gap: 20px;
 }
 
+.config-button{
+    padding: 20px 20px;
+    font-size: 30px;
+    background-color: #c5d119;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
 .side-button {
-    padding: 10px 20px;
-    font-size: 16px;
-    background-color: #ff6666;
+    padding: 20px 30px;
+    font-size: 30px;
+    background-color: #1f8300;
     border: none;
     border-radius: 5px;
     cursor: pointer;
 }
 
 .main-button {
-    padding: 15px 30px;
-    font-size: 20px;
+    padding: 30px 30px;
+    font-size: 30px;
     background-color: #b30086;
     border: none;
     border-radius: 5px;
